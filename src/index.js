@@ -30,6 +30,8 @@ import ReactGA from "react-ga4";
 import AdminLayout from "layouts/Admin.js";
 
 ReactGA.initialize("G-1DWZW9CK5F");
+ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: window.location.pathname });
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

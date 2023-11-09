@@ -2,6 +2,8 @@ import React from "react";
 
 // react-bootstrap components
 import { Badge, Button, Navbar, Nav, Container } from "react-bootstrap";
+ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: window.location.pathname });
+
 
 function Maps() {
   const mapRef = React.useRef(null);

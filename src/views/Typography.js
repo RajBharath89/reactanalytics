@@ -11,6 +11,8 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
+ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: window.location.pathname });
+
 
 function Typography() {
   return (
