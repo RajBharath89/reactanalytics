@@ -13,12 +13,8 @@ import {
   Col,
 } from "react-bootstrap";
 import ReactGA from "react-ga4";
-
-useEffect(() => {
-  ReactGA.initialize("G-1DWZW9CK5F");
-
-  ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: window.location.pathname });
-});
+ReactGA.initialize("G-1DWZW9CK5F");
+ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: window.location.pathname });
 function Typography() {
   return (
     <>
