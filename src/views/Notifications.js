@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+
 // react plugin for creating notifications over the dashboard
 import NotificationAlert from "react-notification-alert";
 // react-bootstrap components
@@ -15,9 +17,12 @@ import {
   Col,
 } from "react-bootstrap";
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-1DWZW9CK5F");
-ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: window.location.pathname });
 
+useEffect(() => {
+  ReactGA.initialize("G-1DWZW9CK5F");
+
+  ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: window.location.pathname });
+});
 
 function Notifications() {
   const [showModal, setShowModal] = React.useState(false);

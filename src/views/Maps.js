@@ -1,11 +1,15 @@
 import React from "react";
+import { useEffect } from "react";
 
 // react-bootstrap components
 import { Badge, Button, Navbar, Nav, Container } from "react-bootstrap";
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-1DWZW9CK5F");
-ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: window.location.pathname });
 
+useEffect(() => {
+  ReactGA.initialize("G-1DWZW9CK5F");
+
+  ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: window.location.pathname });
+});
 
 function Maps() {
   const mapRef = React.useRef(null);
